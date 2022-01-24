@@ -15,6 +15,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.eighteentech.brook.R
+import dev.eighteentech.brook.base.getDate
+import dev.eighteentech.brook.base.getTime
 import dev.eighteentech.brook.entities.PressureMeasure
 
 @Composable
@@ -45,21 +47,21 @@ fun BloodPressureItem(measure: PressureMeasure) {
                 verticalArrangement = Arrangement.Center,
                 modifier = Modifier.height(50.dp),
             ) {
-                Text(measure.getDate(), color = Color.White)
+                Text(measure.timestamp.getDate(), color = Color.White)
             }
             Column(
                 verticalArrangement = Arrangement.Center,
                 modifier = Modifier.height(50.dp),
             ) {
-                Text(measure.getTime(), color = Color.White)
+                Text(measure.timestamp.getTime(), color = Color.White)
             }
         } else {
             Column(
                 verticalArrangement = Arrangement.Center,
                 modifier = Modifier.height(50.dp),
             ) {
-                Text(measure.getDate(), color = Color.White)
-                Text(measure.getTime(), color = Color.White)
+                Text(measure.timestamp.getDate(), color = Color.White)
+                Text(measure.timestamp.getTime(), color = Color.White)
             }
             Image(
                 painter = painterResource(id = R.drawable.ic_exclamation_sign),
@@ -76,13 +78,13 @@ fun BloodPressureItem(measure: PressureMeasure) {
 @Preview(showBackground = true, backgroundColor = 0x000000)
 @Composable
 fun BloodPressureItemNormalPreview() {
-    val measure = PressureMeasure(120.0, 80.0, 1642674077000)
+    val measure = PressureMeasure(120.0f, 80.0f, 1642674077000)
     BloodPressureItem(measure)
 }
 
 @Preview(showBackground = true, backgroundColor = 0x000000)
 @Composable
 fun BloodPressureItemHighPreview() {
-    val measure = PressureMeasure(125.0, 80.0, 1642674077000)
+    val measure = PressureMeasure(125.0f, 80.0f, 1642674077000)
     BloodPressureItem(measure)
 }

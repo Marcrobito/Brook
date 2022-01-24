@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Brook.iml" filepath="$PROJECT_DIR$/.idea/modules/Brook.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Brook.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Brook.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/over/Brook.app.over.iml" filepath="$PROJECT_DIR$/.idea/modules/app/over/Brook.app.over.iml" />
     </modules>
   </component>
 </project>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Brook</string>
+    <string name="error_login_message">There was an error signing into Fit. Check the troubleshooting section of the README
+        for potential issues</string>
 </resources>
